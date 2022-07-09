@@ -26,8 +26,9 @@ class Game
     Render = () => {
         r.BeginDrawing();
 
-        r.ClearBackground(r.RAYWHITE);
-        r.DrawText("Congrats! You created your first node-raylib window!", 120, 200, 20, r.LIGHTGRAY);
+        r.ClearBackground(r.WHITE);
+
+        r.DrawTexture(r.LoadTexture("./art/blocks.png"), 14, 14, r.WHITE);
 
         r.EndDrawing();
     }

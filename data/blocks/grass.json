@@ -1,0 +1,7 @@
+{
+    "uhc:grass": {
+        "visible": true,
+        "transparency": "0",
+        "texture": [1, 0]
+    }
+}
