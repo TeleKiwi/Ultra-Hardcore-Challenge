@@ -1,5 +1,6 @@
 const r = require('raylib');
 
+// nice abstraction away from the bare metal Raylib
 class Game
 {
     screenWidth;
@@ -17,6 +18,7 @@ class Game
         r.SetTargetFPS(targetFPS);
     }
 
+    // game logic
     Tick = () => {
 
     }
@@ -26,7 +28,7 @@ class Game
 
         r.ClearBackground(r.RAYWHITE);
         r.DrawText("Congrats! You created your first node-raylib window!", 120, 200, 20, r.LIGHTGRAY);
-        
+
         r.EndDrawing();
     }
 
@@ -37,4 +39,5 @@ class Game
     }
 }
 
+// export code
 module.exports.Game = Game;
