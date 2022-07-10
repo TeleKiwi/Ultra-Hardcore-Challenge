@@ -23,7 +23,7 @@ class Game
         this.render = new d.Renderer();
 
         // test
-        this.blocks.push(new b.Block(0, 0, "data/blocks/dirt.json"));
+        this.blocks.push(new b.Block(1, 0, "data/blocks/dirt.json"));
 
         r.InitWindow(screenWidth, screenHeight, title);
         r.SetTargetFPS(targetFPS);
@@ -40,12 +40,15 @@ class Game
 
         this.render.renderBlocks(this.blocks);
 
+        r.DrawFPS(0, 0)
+
         r.EndDrawing();
     }
 
     isRunning = () => { return !r.WindowShouldClose(); }
 
     Exit = () => {
+        r.UnloadTexture(this.render.texture);
         r.CloseWindow();
     }
 }

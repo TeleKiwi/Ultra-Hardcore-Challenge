@@ -2,13 +2,16 @@ const r = require('raylib');
 
 class Renderer
 {
+    texture;
+    constructor() {
+        this.texture = "assets/sprites/air.png"; // default value
+    }
+
     renderBlocks = (blocks) => {
-        let texture;
         blocks.forEach(element => {
-            texture = r.LoadTexture(element.data.texture);
-            r.DrawTexture(texture, element.x, element.y, r.WHITE);
+            this.texture = r.LoadTexture(element.data.texture);
+            r.DrawTexture(this.texture, element.x, element.y, r.RAYWHITE);
         }); 
-        r.UnloadTexture(texture);
     }
 }
 
