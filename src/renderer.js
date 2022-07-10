@@ -5,8 +5,10 @@ class Renderer
     renderBlocks = (blocks) => {
         let texture;
         blocks.forEach(element => {
-            r.DrawTexture(, element.x, element.y, r.WHITE);
+            texture = r.LoadTexture(element.data.texture);
+            r.DrawTexture(texture, element.x, element.y, r.WHITE);
         }); 
+        r.UnloadTexture(texture);
     }
 }
 

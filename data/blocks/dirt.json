@@ -1,0 +1,6 @@
+{
+    "id": "uhc:dirt",
+    "visible": true,
+    "transparency": "0",
+    "texture": "assets/sprites/dirt.png"
+}

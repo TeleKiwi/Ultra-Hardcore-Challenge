@@ -23,7 +23,7 @@ class Game
         this.render = new d.Renderer();
 
         // test
-        this.blocks.push(new b.Block(0, 0, "data/blocks/grass.json"));
+        this.blocks.push(new b.Block(0, 0, "data/blocks/dirt.json"));
 
         r.InitWindow(screenWidth, screenHeight, title);
         r.SetTargetFPS(targetFPS);
@@ -36,6 +36,7 @@ class Game
 
     Render = () => {
         r.BeginDrawing();
+        r.ClearBackground(r.RAYWHITE);
 
         this.render.renderBlocks(this.blocks);
 

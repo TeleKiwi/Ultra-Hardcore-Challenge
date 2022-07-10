@@ -2,5 +2,5 @@
     "id": "uhc:grass",
     "visible": true,
     "transparency": "0",
-    "texture": "../data/blocks/grass.json"   
+    "texture": "assets/sprites/grass.png"   
 }

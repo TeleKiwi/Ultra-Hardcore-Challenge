@@ -2,5 +2,5 @@
     "id": "uhc:air",
     "visible": false,
     "transparency": "1",
-    "texture": "../data/blocks/air.json"
+    "texture": "assets/sprites/air.png"
 }
