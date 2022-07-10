@@ -9,6 +9,7 @@ class Renderer
 
     renderBlocks = (blocks) => {
         blocks.forEach(element => {
+            if(element.data.visible === false ) { return; } // rendering invisible blocks is a waste
             try {
                 this.texture = r.LoadTexture(element.data.texture);
             } catch (err) {
