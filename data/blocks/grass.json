@@ -1,7 +1,6 @@
 {
-    "uhc:grass": {
-        "visible": true,
-        "transparency": "0",
-        "texture": [1, 0]
-    }
+    "id": "uhc:grass",
+    "visible": true,
+    "transparency": "0",
+    "texture": "../data/blocks/grass.json"   
 }

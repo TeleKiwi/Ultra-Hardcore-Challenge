@@ -1,7 +1,6 @@
 {
-    "uhc:air": {
-        "visible": false,
-        "transparency": "1",
-        "texture": [0, 0]
-    }
+    "id": "uhc:air",
+    "visible": false,
+    "transparency": "1",
+    "texture": "../data/blocks/air.json"
 }

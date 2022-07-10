@@ -1,7 +1,6 @@
 {
-    (block id, with structure origin:blockname): {
-        "opacity": (true = visible. false = invisible.)
-        "transparancy": (true = lets light through. false = lets no light through.)
-        "texture": (2 number list corresponding to texture atlas.)
-    }
+    "id": "(block id, with structure origin:blockname)"
+    "opacity": (true = visible. false = invisible.)
+    "transparancy": (true = lets light through. false = lets no light through.)
+    "texture": (relative path to texture.)   
 }

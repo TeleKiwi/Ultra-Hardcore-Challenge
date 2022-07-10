@@ -1,4 +1,6 @@
 const r = require('raylib');
+const d = require('./renderer.js');
+const b = require('./tiles/block.js');
 
 // nice abstraction away from the bare metal Raylib
 class Game
@@ -8,11 +10,20 @@ class Game
     title;
     targetFPS;
 
+    d;
+
+    blocks;
+
     constructor(screenWidth, screenHeight, title, targetFPS) {
         this.screenWidth = screenWidth;
         this.screenHeight = screenHeight;
         this.title = title;
         this.targetFPS = targetFPS;
+        this.blocks = [];
+        this.render = new d.Renderer();
+
+        // test
+        this.blocks.push(new b.Block(0, 0, "data/blocks/grass.json"));
 
         r.InitWindow(screenWidth, screenHeight, title);
         r.SetTargetFPS(targetFPS);
@@ -20,15 +31,13 @@ class Game
 
     // game logic
     Tick = () => {
-
+        
     }
 
     Render = () => {
         r.BeginDrawing();
 
-        r.ClearBackground(r.WHITE);
-
-        r.DrawTexture(r.LoadTexture("./art/blocks.png"), 14, 14, r.WHITE);
+        this.render.renderBlocks(this.blocks);
 
         r.EndDrawing();
     }
